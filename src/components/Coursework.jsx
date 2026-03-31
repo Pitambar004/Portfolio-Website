@@ -2,23 +2,23 @@ import { motion } from 'framer-motion'
 
 function Coursework() {
   const csCourses = [
-    { name: 'COMP SCI 140 - Programming Problem Solving (comp_sci_140.java)', status: 'progress' },
-    { name: 'COMP SCI 181 - Human-Centered Design (comp_sci_181.md)', status: 'progress' },
-    { name: 'COMP SCI 240 - Discrete Mathematics (comp_sci_240.md)', status: 'taken' },
-    { name: 'COMP SCI 231 - Introduction to Operations (comp_sci_231.md)', status: 'taken' },
-    { name: 'COMP SCI 256 - Intro to Software Design (comp_sci_256.md)', status: 'taken' },
-    { name: 'COMP SCI 330 - Computer Programming II (comp_sci_330.java)', status: 'taken' },
-    { name: 'COMP SCI 207 - Programming in C (comp_sci_207.c)', status: 'taken' },
-    { name: 'MATH 203 - Calculus-Analyt Geom I (math_203.md)', status: 'taken' },
-    { name: 'MATH 260 - Introductory Statistics (math_260.md)', status: 'taken' },
-    { name: 'MATH 202 - Calculus-Analyt Geom E (math_202.md)', status: 'taken' },
-    { name: 'MATH 320 - Linear Algebra and Matrix Theory (math_320.md)', status: 'progress' },
+    { name: 'COMP SCI 140 - Programming Problem Solving', status: 'progress' },
+    { name: 'COMP SCI 181 - Human-Centered Design', status: 'progress' },
+    { name: 'COMP SCI 240 - Discrete Mathematics', status: 'taken' },
+    { name: 'COMP SCI 231 - Introduction to Operations', status: 'taken' },
+    { name: 'COMP SCI 256 - Intro to Software Design', status: 'taken' },
+    { name: 'COMP SCI 330 - Computer Programming II', status: 'taken' },
+    { name: 'COMP SCI 207 - Programming in C', status: 'taken' },
+    { name: 'MATH 203 - Calculus-Analyt Geom I', status: 'taken' },
+    { name: 'MATH 260 - Introductory Statistics', status: 'taken' },
+    { name: 'MATH 202 - Calculus-Analyt Geom E', status: 'taken' },
+    { name: 'MATH 320 - Linear Algebra and Matrix Theory', status: 'progress' },
   ]
 
   const seCourses = [
-    { name: 'SE 310 - SE Fundamentals (se_310.md)', status: 'progress' },
-    { name: 'ENGR 236 - Technical Writing (engr_236.md)', status: 'progress' },
-    { name: 'COMP SCI 256 - Intro to Software Design (comp_sci_256.md)', status: 'taken' },
+    { name: 'SE 310 - SE Fundamentals', status: 'progress' },
+    { name: 'ENGR 236 - Technical Writing', status: 'progress' },
+    { name: 'COMP SCI 256 - Intro to Software Design', status: 'taken' },
   ]
 
   return (
