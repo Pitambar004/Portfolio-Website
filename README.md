@@ -1,18 +1,89 @@
-# React + Vite
+# Pitambar Pandey - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A handcrafted single-page portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+This project highlights software engineering work, skills, coursework, experience, and contact details in a clean "built by an engineer" style with smooth motion and responsive design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React + Vite
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- HTML5 Canvas (custom particle network background)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Features
 
-Note: This will impact Vite dev & build performances.
+- Light mode by default + dark mode toggle
+- Theme preference persisted with `localStorage`
+- Fixed responsive navbar with animated tab styles
+- Hero section with animated code-window presentation
+- Interactive particle network background
+- Skills, Projects, Experience, Schooling, Contact, and Footer sections
+- Mobile-first responsive layout across sections
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```txt
+src/
+  App.jsx
+  index.css
+  components/
+    Navbar.jsx
+    Hero.jsx
+    About.jsx
+    Skills.jsx
+    Projects.jsx
+    Experience.jsx
+    Schooling.jsx
+    Contact.jsx
+    Footer.jsx
+    ParticleNetwork.jsx
+public/
+  favicon.svg
+  profile.jpg
+  resume.pdf
+```
+
+## Getting Started
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Run development server
+
+```bash
+npm run dev
+```
+
+### 3) Build for production
+
+```bash
+npm run build
+```
+
+### 4) Preview production build
+
+```bash
+npm run preview
+```
+
+## Customization
+
+- Update personal content directly in files under `src/components/`
+- Replace resume at `public/resume.pdf`
+- Replace profile image at `public/profile.jpg`
+- Update favicon at `public/favicon.svg`
+- Adjust theme tokens in `tailwind.config.js`
+
+## Notes
+
+- The canvas particle background is implemented with raw Canvas API (no particle library).
+- Animations are powered by Framer Motion for smooth section entry and UI transitions.
+
+## License
+
+This project is for personal portfolio use.
