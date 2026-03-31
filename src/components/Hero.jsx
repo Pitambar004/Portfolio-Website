@@ -3,19 +3,52 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { HiArrowDown } from 'react-icons/hi'
 
 function Hero() {
+  const jsLines = [
+    <>
+      <span className="text-violet-400">const</span> <span className="text-sky-300">developer</span>{' '}
+      <span className="text-zinc-300">=</span> <span className="text-zinc-500">{'{'}</span>
+    </>,
+    <>
+      {'  '}
+      <span className="text-emerald-300">"name"</span>: <span className="text-emerald-400">"Pitambar Pandey"</span>,
+    </>,
+    <>
+      {'  '}
+      <span className="text-emerald-300">"role"</span>: [
+      <span className="text-emerald-400">"SWE Student"</span>, <span className="text-emerald-400">"AI Enthusiast"</span>,{' '}
+      <span className="text-emerald-400">"Builder"</span>
+      <span className="text-zinc-500">]</span>,
+    </>,
+    <>
+      {'  '}
+      <span className="text-emerald-300">"university"</span>: <span className="text-emerald-400">"UW-Green Bay"</span>,
+    </>,
+    <>
+      {'  '}
+      <span className="text-emerald-300">"gpa"</span>: <span className="text-orange-300">4.0</span>,
+    </>,
+    <>
+      {'  '}
+      <span className="text-emerald-300">"status"</span>: <span className="text-emerald-400">"open_to_opportunities"</span>
+    </>,
+    <>
+      <span className="text-zinc-500">{'}'}</span>;
+    </>,
+  ]
+
   return (
     <section id="start" className="relative min-h-[calc(100svh-6rem)] w-full overflow-hidden">
       <div className="pointer-events-none absolute inset-0 opacity-30">
         <div className="grid-bg h-full w-full" />
       </div>
-      <div className="relative z-10 flex min-h-[calc(100svh-6rem)] flex-col items-center justify-center px-4 py-6 sm:px-6 sm:py-8">
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-3 py-1 font-mono text-[11px] text-zinc-700 shadow-sm dark:border-white/10 dark:bg-black/20 dark:text-zinc-200">
+      <div className="relative z-10 flex min-h-[calc(100svh-6rem)] flex-col items-center justify-center gap-6 px-4 py-6 sm:gap-7 sm:px-6 sm:py-10">
+        <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-3 py-1 font-mono text-[11px] text-zinc-700 shadow-sm dark:border-white/10 dark:bg-black/20 dark:text-zinc-200">
           <span className="h-2 w-2 rounded-full bg-emerald-500" />
           Welcome to my page
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 26 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -27,28 +60,34 @@ function Hero() {
             <span className="h-3 w-3 rounded-full bg-green-500" />
           </div>
           <div className="px-4 py-6">
-            <div className="flex font-mono text-xs md:text-base">
-              <div className="mr-4 select-none pr-4 text-right text-zinc-400">
-                {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-                  <p key={n}>{n}</p>
-                ))}
+            <div className="grid gap-5 font-mono text-xs md:text-sm">
+              <div className="rounded-lg border border-white/10 bg-black/20 p-3">
+                <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-indigo-300">
+                  JavaScript
+                </p>
+
+                {/* Smooth "typing" reveal from top */}
+                <motion.div
+                  initial={{ scaleY: 0 }}
+                  whileInView={{ scaleY: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.6, ease: 'easeInOut' }}
+                  style={{ transformOrigin: 'top' }}
+                  className="overflow-hidden will-change-transform"
+                >
+                  <pre className="overflow-x-auto whitespace-pre text-zinc-100">
+                    <code>
+                      {jsLines.map((line, idx) => (
+                        <span key={idx}>
+                          {line}
+                          {idx < jsLines.length - 1 ? '\n' : ''}
+                        </span>
+                      ))}
+                      <span className="ml-0.5 animate-blink text-indigo-300">|</span>
+                    </code>
+                  </pre>
+                </motion.div>
               </div>
-              <pre className="overflow-x-auto">
-                <code>
-                  <span className="text-violet-500">const</span> developer <span className="text-zinc-500">=</span>{' '}
-                  <span>{'{'}</span>{'\n'}
-                  {'  '}name: <span className="text-emerald-500">"Pitambar Pandey"</span>,{'\n'}
-                  {'  '}role: [{'\n'}
-                  {'    '}<span className="text-emerald-500">"SWE Student"</span>,{'\n'}
-                  {'    '}<span className="text-emerald-500">"AI Enthusiast"</span>,{'\n'}
-                  {'    '}<span className="text-emerald-500">"Builder"</span>,{'\n'}
-                  {'  '}],{'\n'}
-                  {'  '}university: <span className="text-emerald-500">"UW-Green Bay"</span>,{'\n'}
-                  {'  '}gpa: <span className="text-orange-500">4.0</span>,{'\n'}
-                  {'  '}status: <span className="text-emerald-500">"open_to_opportunities"</span>{'\n'}
-                  {'}'};<span className="animate-blink">|</span>
-                </code>
-              </pre>
             </div>
           </div>
         </motion.div>
@@ -57,7 +96,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="mt-7 flex w-full max-w-3xl flex-col items-center gap-3 sm:gap-4 lg:max-w-4xl"
+          className="flex w-full max-w-3xl flex-col items-center gap-3 sm:gap-4 lg:max-w-4xl"
         >
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:justify-center">
             <a
