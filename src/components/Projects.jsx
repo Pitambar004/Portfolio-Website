@@ -3,6 +3,15 @@ import { FaFolder, FaGithub } from 'react-icons/fa'
 
 const projects = [
   {
+    name: 'LedgerSync',
+    description:
+      'Java app that reads account + transaction JSON, matches records, updates balances, and outputs a new JSON snapshot (CS 330 assignment).',
+    stack: 'Java · Jackson · JSON · OOP',
+    languageColor: 'bg-red-500',
+    github: '#',
+    live: '#',
+  },
+  {
     name: 'Bill Splitter App',
     description: 'GUI app that splits bills with tax logic and validation for cleaner shared expense tracking.',
     stack: 'Python · Tkinter · OOP',
@@ -39,17 +48,14 @@ function Projects() {
     >
       <p className="mb-3 font-mono text-xs text-indigo-600 dark:text-indigo-300">[ projects.jsx ]</p>
       <h2 className="mb-6 text-3xl font-bold md:text-4xl">Shipped Projects</h2>
-      <motion.div
-        className="grid grid-cols-1 gap-4 md:grid-cols-2"
-        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.12 } } }}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {projects.map((project) => (
           <motion.article
             key={project.name}
-            variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.4 }}
             className="group rounded-xl border border-black/10 bg-lightCard p-5 transition hover:-translate-y-1 hover:border-l-4 hover:border-l-indigo-600 dark:border-white/10 dark:bg-darkCard"
           >
             <div className="mb-3 flex items-center gap-2">
@@ -74,7 +80,7 @@ function Projects() {
         <div className="grid place-items-center rounded-xl border-2 border-dashed border-zinc-300 p-5 font-mono text-sm text-zinc-500 dark:border-zinc-700">
           + More Coming Soon
         </div>
-      </motion.div>
+      </div>
     </motion.section>
   )
 }

@@ -1,4 +1,36 @@
 import { motion } from 'framer-motion'
+import {
+  SiCss,
+  SiGit,
+  SiGithub,
+  SiC,
+  SiHtml5,
+  SiJavascript,
+  SiMysql,
+  SiNodedotjs,
+  SiPython,
+  SiReact,
+  SiSqlite,
+  SiOpenai,
+} from 'react-icons/si'
+import { FaJava } from 'react-icons/fa'
+import { FaCloud } from 'react-icons/fa'
+
+const skillIcons = [
+  { name: 'Java', Icon: FaJava, color: '#EA2845' },
+  { name: 'Python', Icon: SiPython, color: '#3776AB' },
+  { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E' },
+  { name: 'C', Icon: SiC, color: '#A8B9CC' },
+  { name: 'SQL', Icon: SiSqlite, color: '#4479A1' },
+  { name: 'HTML', Icon: SiHtml5, color: '#E34F26' },
+  { name: 'CSS', Icon: SiCss, color: '#1572B6' },
+  { name: 'React.js', Icon: SiReact, color: '#61DAFB' },
+  { name: 'Node.js', Icon: SiNodedotjs, color: '#3C873A' },
+  { name: 'Git', Icon: SiGit, color: '#F05032' },
+  { name: 'GitHub', Icon: SiGithub, color: '#181717' },
+  { name: 'MySQL', Icon: SiMysql, color: '#00758F' },
+  { name: 'Azure OpenAI', Icon: FaCloud, overlayIcon: SiOpenai, color: '#0078D4', overlayColor: '#E5E7EB' },
+]
 
 function Skills() {
   return (
@@ -35,6 +67,36 @@ function Skills() {
           <span className="text-zinc-500">{'}'}</span>
         </code>
       </motion.pre>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1 }}
+        className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+      >
+        {skillIcons.map(({ name, Icon, overlayIcon: OverlayIcon, color, overlayColor }) => (
+          <div
+            key={name}
+            className="flex items-center gap-2 rounded-lg border border-black/10 bg-lightCard px-3 py-2 text-sm dark:border-white/10 dark:bg-darkCard"
+          >
+            <span className="relative inline-flex h-5 w-5 items-center justify-center">
+              {OverlayIcon ? (
+                <>
+                  <Icon style={{ color }} className="absolute inset-0 text-base" />
+                  <OverlayIcon
+                    style={{ color: overlayColor }}
+                    className="absolute inset-0 translate-y-[1px] text-[14px]"
+                  />
+                </>
+              ) : (
+                <Icon style={{ color }} className="text-base" />
+              )}
+            </span>
+            <span>{name}</span>
+          </div>
+        ))}
+      </motion.div>
     </motion.section>
   )
 }

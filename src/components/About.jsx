@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 function About() {
+  const [photoMissing, setPhotoMissing] = useState(false)
+
   return (
     <motion.section
       id="about"
@@ -11,12 +14,40 @@ function About() {
     >
       <p className="mb-3 font-mono text-xs text-indigo-600 dark:text-indigo-300">[ about.md ]</p>
       <h2 className="mb-5 text-3xl font-bold md:text-4xl">Built by an Engineer, Driven by Impact.</h2>
-      <div className="rounded-xl border border-black/10 bg-lightCard p-6 dark:border-white/10 dark:bg-darkCard">
-        <p className="leading-8 text-zinc-700 dark:text-zinc-300">
-          I am a Computer Science and Software Engineering student at UW-Green Bay with a 4.0 GPA, focused on
-          designing practical software systems. I combine startup execution from co-founding Media and IT Hub with
-          strong foundations in AI, backend architecture, and product-focused frontend engineering.
-        </p>
+      <div className="grid gap-6 md:grid-cols-[1fr_240px]">
+        <div className="rounded-xl border border-black/10 bg-lightCard p-6 dark:border-white/10 dark:bg-darkCard">
+          <p className="leading-8 text-zinc-700 dark:text-zinc-300">
+            I&apos;m a passionate Software Engineering student at the University of Wisconsin–Green Bay with hands-on
+            experience in web development, programming, and project management. I enjoy turning ideas into functional
+            software through creativity and collaboration.
+          </p>
+          <p className="mt-5 leading-8 text-zinc-700 dark:text-zinc-300">
+            Skilled in C, Java, Python, JavaScript, HTML, CSS, Git, and database management, I&apos;ve developed and
+            deployed multiple academic and personal projects, including a responsive website for my high school. My
+            goal is to contribute to real-world applications through an internship where I can grow as a developer and
+            problem-solver.
+          </p>
+          <p className="mt-5 font-mono font-semibold text-indigo-700 dark:text-indigo-300">
+            🚀 Always learning. Always building.
+          </p>
+        </div>
+
+        <div className="rounded-xl border border-black/10 bg-lightCard p-5 dark:border-white/10 dark:bg-darkCard">
+          <p className="mb-2 font-mono text-xs text-zinc-500 dark:text-zinc-400">profile.jpg</p>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-indigo-300/70 bg-gradient-to-br from-indigo-100 to-white dark:border-indigo-400/30 dark:from-indigo-900/30 dark:to-zinc-900">
+            <img
+              src="/profile.jpg"
+              alt="Pitambar Pandey profile"
+              className="h-full w-full object-cover"
+              onError={() => setPhotoMissing(true)}
+            />
+            {photoMissing && (
+              <div className="absolute inset-0 grid place-items-center px-5 text-center font-mono text-xs text-zinc-500 dark:text-zinc-300">
+                Add your photo at <span className="ml-1 text-indigo-600 dark:text-indigo-300">/public/profile.jpg</span>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </motion.section>
   )

@@ -1,24 +1,66 @@
 import { motion } from 'framer-motion'
 
-const entries = [
+const uwgbWork = [
   {
-    company: 'Media and IT Hub Pvt Ltd',
-    role: 'Co-Founder / Front-End Dev',
-    date: 'a3f91bc · Aug 2023 - Jul 2024',
+    company: 'Google Developer Group on Campus – UWGB',
+    role: 'Vice President',
+    location: 'Green Bay, WI',
+    date: 'Nov 2025 – Present',
     bullets: [
-      'Led strategy and delivery across web development service lines.',
-      'Rebuilt client websites with modern frontend architecture.',
-      'Aligned designers and developers for predictable releases.',
+      'Helped establish the official GDG chapter at UW–Green Bay as a space for students to explore modern tech.',
+      'Designed the chapter framework and defined leadership roles for sustainable growth.',
+      'Led outreach to grow membership and visibility on campus.',
+      'Planned workshops and study jams on Android, Firebase, web, AI/ML, and Google Cloud.',
+      'Connected with nearby GDG communities and campus orgs; laid groundwork for hackathons and mentorship.',
     ],
   },
   {
-    company: 'Sauryakunja Secondary School',
-    role: 'CS & Science Teacher',
-    date: 'c72be0f · Sep 2023 - Apr 2024',
+    company: 'Chartwells Higher Education Dining Services',
+    role: 'Supervisor – Einstein Bros. Bagels',
+    location: 'Green Bay, WI',
+    date: 'Sep 2024 – Present',
     bullets: [
-      'Taught CS fundamentals: HTML, CSS, C, and QBasic.',
-      'Maintained school IT operations and troubleshooting workflows.',
-      'Designed practical labs that improved student engagement.',
+      'Supervise daily operations and customer service during peak hours.',
+      'Manage staff schedules, inventory, and product quality for beverages and food.',
+      'Train new hires, coordinate daily tasks, and keep workflows efficient to company standards.',
+    ],
+  },
+]
+
+const entries = [
+  {
+    company: 'Media and IT Hub Pvt. Ltd.',
+    role: 'CEO / Event Coordinator',
+    location: 'Kathmandu, Nepal',
+    date: 'Aug 2023 – Jul 2024',
+    bullets: [
+      'Led the company as CEO, driving strategy, growth, and innovation across media and IT services.',
+      'Coordinated bridge courses blending media and IT education for students.',
+      'Taught Math, Physics, and Chemistry with a focus on foundational skills.',
+      'Oversaw program development and execution to deliver strong educational outcomes.',
+    ],
+  },
+  {
+    company: 'Sauryakunj Academy',
+    role: 'Secondary Science & Computer Teacher',
+    location: 'Nepal',
+    date: 'Sep 2023 – Apr 2024',
+    bullets: [
+      'Designed hands-on science experiments to deepen student understanding.',
+      'Adapted instruction for diverse learning styles; used simulations and educational apps.',
+      'Promoted inquiry-based learning and organized science fairs and field trips.',
+    ],
+  },
+  {
+    company: 'Orient College',
+    role: 'IT Head',
+    location: 'Basundhara, Kathmandu',
+    date: 'Jul 2021 – Aug 2023',
+    bullets: [
+      'Set up computers, projectors, and network gear for college events.',
+      'Supported students and faculty with technical issues during programs.',
+      'Ran sessions on using technology for real-world problem solving.',
+      'Managed tech and registration for gaming events; collaborated with student clubs.',
     ],
   },
 ]
@@ -33,23 +75,65 @@ function Experience() {
       className="py-20"
     >
       <p className="mb-3 font-mono text-xs text-indigo-600 dark:text-indigo-300">[ git-log ]</p>
-      <h2 className="mb-6 text-3xl font-bold md:text-4xl">Experience Timeline</h2>
-      <div className="relative ml-2 space-y-8 border-l border-indigo-300/70 pl-8 dark:border-indigo-400/40">
+      <h2 className="mb-2 text-3xl font-bold md:text-4xl">Experience Timeline</h2>
+      <p className="mb-8 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+        Leadership, teaching, operations, and community building — newest commits first.
+      </p>
+      <div className="relative ml-2 space-y-6 border-l border-indigo-300/70 pl-8 dark:border-indigo-400/40 md:space-y-8">
+        <article className="relative rounded-xl border border-black/10 bg-lightCard p-5 shadow-sm transition hover:border-indigo-300/50 dark:border-white/10 dark:bg-darkCard dark:hover:border-indigo-500/30">
+          <span className="absolute -left-[2.15rem] top-7 h-3.5 w-3.5 rounded-full bg-indigo-600 ring-4 ring-lightBg dark:bg-indigo-300 dark:ring-darkBg" />
+          <div className="mb-3 flex flex-wrap items-center gap-2">
+            <h3 className="font-mono text-base font-semibold md:text-lg">UWGB Work</h3>
+            <span className="rounded-full bg-indigo-600 px-2 py-0.5 text-xs text-white dark:bg-indigo-300 dark:text-black">
+              On-campus Experience
+            </span>
+          </div>
+          <div className="space-y-4">
+            {uwgbWork.map((entry) => (
+              <div
+                key={`${entry.company}-${entry.date}`}
+                className="rounded-lg border border-black/10 bg-white/40 p-4 dark:border-white/10 dark:bg-black/20"
+              >
+                <div className="mb-2 flex flex-wrap items-center gap-2">
+                  <h4 className="font-mono text-sm font-semibold md:text-base">{entry.company}</h4>
+                  <span className="rounded-full bg-indigo-600 px-2 py-0.5 text-[11px] text-white dark:bg-indigo-300 dark:text-black">
+                    {entry.role}
+                  </span>
+                </div>
+                <p className="mb-1 font-mono text-xs text-zinc-500">{entry.date}</p>
+                <p className="mb-3 text-xs text-zinc-500 dark:text-zinc-400">{entry.location}</p>
+                <ul className="space-y-2 text-sm">
+                  {entry.bullets.map((bullet) => (
+                    <li key={bullet} className="text-zinc-700 dark:text-zinc-300">
+                      <span className="mr-2 inline-block align-top font-mono text-emerald-500">+</span>
+                      <span className="inline-block max-w-[calc(100%-1.25rem)]">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </article>
+
         {entries.map((entry) => (
-          <article key={entry.company} className="relative rounded-xl border border-black/10 bg-lightCard p-5 dark:border-white/10 dark:bg-darkCard">
-            <span className="absolute -left-[2.15rem] top-7 h-3.5 w-3.5 rounded-full bg-indigo-600 dark:bg-indigo-300" />
+          <article
+            key={`${entry.company}-${entry.date}`}
+            className="relative rounded-xl border border-black/10 bg-lightCard p-5 shadow-sm transition hover:border-indigo-300/50 dark:border-white/10 dark:bg-darkCard dark:hover:border-indigo-500/30"
+          >
+            <span className="absolute -left-[2.15rem] top-7 h-3.5 w-3.5 rounded-full bg-indigo-600 ring-4 ring-lightBg dark:bg-indigo-300 dark:ring-darkBg" />
             <div className="mb-2 flex flex-wrap items-center gap-2">
-              <h3 className="font-mono font-semibold">{entry.company}</h3>
+              <h3 className="font-mono text-base font-semibold md:text-lg">{entry.company}</h3>
               <span className="rounded-full bg-indigo-600 px-2 py-0.5 text-xs text-white dark:bg-indigo-300 dark:text-black">
                 {entry.role}
               </span>
             </div>
-            <p className="mb-3 font-mono text-xs text-zinc-500">{entry.date}</p>
-            <ul className="space-y-1 text-sm">
+            <p className="mb-1 font-mono text-xs text-zinc-500">{entry.date}</p>
+            <p className="mb-3 text-xs text-zinc-500 dark:text-zinc-400">{entry.location}</p>
+            <ul className="space-y-2 text-sm">
               {entry.bullets.map((bullet) => (
                 <li key={bullet} className="text-zinc-700 dark:text-zinc-300">
-                  <span className="mr-2 font-mono text-emerald-500">+</span>
-                  {bullet}
+                  <span className="mr-2 inline-block align-top font-mono text-emerald-500">+</span>
+                  <span className="inline-block max-w-[calc(100%-1.25rem)]">{bullet}</span>
                 </li>
               ))}
             </ul>
