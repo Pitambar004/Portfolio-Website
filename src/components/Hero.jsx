@@ -61,7 +61,8 @@ function Hero() {
           </div>
           <div className="px-4 py-6">
             <div className="grid gap-5 font-mono text-xs md:text-sm">
-              <div className="rounded-lg border border-white/10 bg-black/20 p-3">
+              {/* Dark editor surface so syntax colors stay readable in light theme */}
+              <div className="rounded-lg border border-zinc-700/90 bg-zinc-900 p-3 text-zinc-100 shadow-inner dark:border-white/10 dark:bg-zinc-950/90">
                 <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-indigo-300">
                   JavaScript
                 </p>
