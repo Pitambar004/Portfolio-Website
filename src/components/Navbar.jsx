@@ -28,7 +28,7 @@ function Navbar({ theme, setTheme }) {
           className="hidden select-none items-center gap-2 rounded-lg border border-black/10 bg-white/50 px-2.5 py-1 font-mono text-[11px] text-zinc-700 shadow-sm dark:border-white/10 dark:bg-black/20 dark:text-zinc-200 md:flex"
         >
           <span className="h-2 w-2 rounded-full bg-indigo-500 shadow-[0_0_0_3px_rgba(79,70,229,0.12)] dark:bg-indigo-300 dark:shadow-[0_0_0_3px_rgba(129,140,248,0.12)]" />
-          <span>portfolio</span>
+          <span>Pitambar Pandey</span>
         </a>
 
         <div className="hidden items-center gap-2 md:flex">
