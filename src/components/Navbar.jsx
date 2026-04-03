@@ -36,6 +36,7 @@ function Navbar({ theme, setTheme }) {
             <a
               key={tab.id}
               href={`#${tab.id}`}
+              aria-current={active === tab.id ? 'page' : undefined}
               className={`group relative rounded-xl px-3 py-2 font-mono text-xs transition ${
                 active === tab.id
                   ? 'border border-black/10 bg-white/70 text-zinc-900 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-zinc-100'

@@ -69,10 +69,23 @@ function Projects() {
                 <span>{project.stack}</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <a href={project.github} aria-label="GitHub project link">
+                <a
+                  href={project.github}
+                  aria-label={`${project.name} on GitHub`}
+                  {...(String(project.github).startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
+                >
                   <FaGithub />
                 </a>
-                <a href={project.live}>Live Demo</a>
+                <a
+                  href={project.live}
+                  {...(String(project.live).startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
+                >
+                  Live Demo
+                </a>
               </div>
             </div>
           </motion.article>

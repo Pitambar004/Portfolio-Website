@@ -42,6 +42,11 @@ function Hero() {
         <div className="grid-bg h-full w-full" />
       </div>
       <div className="relative z-10 flex min-h-[calc(100svh-6rem)] flex-col items-center justify-center gap-6 px-4 py-6 sm:gap-7 sm:px-6 sm:py-10">
+        <h1 className="sr-only">
+          Pitambar Pandey — Software Engineering student at UW–Green Bay. Software engineer portfolio, Java, Python,
+          React, full-stack projects.
+        </h1>
+
         <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-3 py-1 font-mono text-[11px] text-zinc-700 shadow-sm dark:border-white/10 dark:bg-black/20 dark:text-zinc-200">
           <span className="h-2 w-2 rounded-full bg-emerald-500" />
           Welcome to my page

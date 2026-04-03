@@ -1,0 +1,17 @@
+{
+  "name": "Pitambar Pandey — Software Engineer Portfolio",
+  "short_name": "Pitambar Pandey",
+  "description": "Software Engineering student at UW–Green Bay. Portfolio, projects, and contact.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F7F4",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}

@@ -84,6 +84,23 @@ npm run preview
 - The canvas particle background is implemented with raw Canvas API (no particle library).
 - Animations are powered by Framer Motion for smooth section entry and UI transitions.
 
+## SEO & production domain
+
+This is a **Vite + React SPA** (single HTML entry). On-page SEO is handled in `index.html` (title, meta, Open Graph, Twitter, canonical, JSON-LD). At build time, `vite.config.js` replaces `%SITE_URL%` and `%OG_IMAGE_URL%` with values from your environment and writes `robots.txt` and `sitemap.xml` into `dist/`.
+
+1. Copy `.env.example` to `.env` and set **`VITE_SITE_URL`** to your live site (no trailing slash), e.g. `https://yourdomain.com`.
+2. Add a social preview image at **`public/og-image.png`** (recommended **1200×630** PNG or JPG), or set **`VITE_OG_IMAGE_URL`** to a full image URL.
+3. Run `npm run build` and deploy the **`dist`** folder.
+4. After deploy, submit **`https://yourdomain.com/sitemap.xml`** in [Google Search Console](https://search.google.com/search-console) and verify domain ownership.
+
+**Static hosting notes**
+
+- **Netlify:** `public/_redirects` sends unknown paths to `index.html` for SPA routing.
+- **GitHub Pages:** configure Pages to use the `dist` output (or Actions). Unknown paths may need your host’s SPA fallback; `public/404.html` is a minimal standalone 404 with `noindex`.
+- **Vercel:** the Vite preset usually serves the SPA without extra config.
+
+**Future blog (optional SEO growth):** add a `/blog` route or a separate repo with consistent branding, one `h1` per article, article schema (`BlogPosting`), and internal links back to this portfolio.
+
 ## License
 
 This project is for personal portfolio use.

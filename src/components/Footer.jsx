@@ -8,10 +8,37 @@ function Footer() {
           <p className="font-mono text-xs font-semibold tracking-widest text-indigo-600 dark:text-indigo-300">
             [ LET&apos;S BUILD SOMETHING ]
           </p>
-          <h3 className="mt-2 text-3xl font-extrabold md:text-4xl">Amazing Together</h3>
+          <p className="mt-2 text-3xl font-extrabold md:text-4xl">Let&apos;s Build Something Amazing Together</p>
           <p className="mx-auto mt-3 max-w-xl text-sm text-zinc-600 dark:text-zinc-400">
-            Ready to bring your ideas to life? I&apos;m here to help you create exceptional digital experiences.
+            Pitambar Pandey — Software Engineering student and developer. Open to internships and collaboration.
           </p>
+
+          <nav
+            className="mx-auto mt-6 flex max-w-lg flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-medium text-zinc-600 dark:text-zinc-400"
+            aria-label="Footer section links"
+          >
+            <a href="#about" className="hover:text-indigo-600 dark:hover:text-indigo-300">
+              About
+            </a>
+            <a href="#skills" className="hover:text-indigo-600 dark:hover:text-indigo-300">
+              Skills
+            </a>
+            <a href="#projects" className="hover:text-indigo-600 dark:hover:text-indigo-300">
+              Projects
+            </a>
+            <a href="#experience" className="hover:text-indigo-600 dark:hover:text-indigo-300">
+              Experience
+            </a>
+            <a href="#schooling" className="hover:text-indigo-600 dark:hover:text-indigo-300">
+              Schooling
+            </a>
+            <a href="#coursework" className="hover:text-indigo-600 dark:hover:text-indigo-300">
+              Coursework
+            </a>
+            <a href="#contact" className="hover:text-indigo-600 dark:hover:text-indigo-300">
+              Contact
+            </a>
+          </nav>
 
           <div className="mt-6 flex items-center justify-center gap-4">
             <a

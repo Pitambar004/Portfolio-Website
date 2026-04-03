@@ -42,7 +42,11 @@ function Skills() {
       className="py-20"
     >
       <p className="mb-3 font-mono text-xs text-indigo-600 dark:text-indigo-300">[ skills.json ]</p>
-      <h2 className="mb-5 text-3xl font-bold md:text-4xl">Tech Stack Snapshot</h2>
+      <h2 className="mb-2 text-3xl font-bold md:text-4xl">Tech Stack Snapshot</h2>
+      <p className="mb-5 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
+        Core skills for building software as a UWGB student developer — Java, Python, JavaScript, React, and full-stack
+        delivery.
+      </p>
       <motion.pre
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}

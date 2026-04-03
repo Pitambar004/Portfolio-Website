@@ -41,12 +41,13 @@ function Contact() {
       <p className="mb-3 text-center font-mono text-xs text-indigo-600 dark:text-indigo-300">[ contact.jsx ]</p>
       <h2 className="text-center text-4xl font-extrabold tracking-tight md:text-5xl">Get In Touch</h2>
       <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-zinc-600 dark:text-zinc-400">
-        Ready to start a project or just want to chat? I&apos;d love to hear from you.
+        Recruiters and collaborators: reach out about internships, full-stack or backend work, or UWGB–related
+        opportunities. Email opens in your client — I respond as soon as I can.
       </p>
 
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         <div className="rounded-2xl border border-black/10 bg-lightCard/70 p-7 shadow-lg backdrop-blur dark:border-white/10 dark:bg-darkCard/70">
-          <h3 className="text-xl font-bold">Let&apos;s Connect</h3>
+          <h3 className="text-xl font-bold">Contact Pitambar Pandey</h3>
           <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
             I&apos;m always open to discussing new opportunities, interesting projects, or just having a friendly chat
             about technology and development.
@@ -99,8 +100,13 @@ function Contact() {
 
           <form className="mt-6 space-y-4" onSubmit={onSubmit}>
             <div>
-              <label className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">Name</label>
+              <label htmlFor="contact-name" className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                Name
+              </label>
               <input
+                id="contact-name"
+                name="name"
+                autoComplete="name"
                 className="mt-2 w-full rounded-lg border border-black/10 bg-white/60 px-4 py-3 text-sm outline-none ring-indigo-500/30 focus:ring-4 dark:border-white/10 dark:bg-black/30"
                 placeholder="Your name"
                 value={form.name}
@@ -108,8 +114,14 @@ function Contact() {
               />
             </div>
             <div>
-              <label className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">Email</label>
+              <label htmlFor="contact-email" className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                Email
+              </label>
               <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autoComplete="email"
                 className="mt-2 w-full rounded-lg border border-black/10 bg-white/60 px-4 py-3 text-sm outline-none ring-indigo-500/30 focus:ring-4 dark:border-white/10 dark:bg-black/30"
                 placeholder="your.email@example.com"
                 value={form.email}
@@ -117,8 +129,12 @@ function Contact() {
               />
             </div>
             <div>
-              <label className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">Message</label>
+              <label htmlFor="contact-message" className="text-xs font-semibold text-zinc-600 dark:text-zinc-300">
+                Message
+              </label>
               <textarea
+                id="contact-message"
+                name="message"
                 className="mt-2 w-full rounded-lg border border-black/10 bg-white/60 px-4 py-3 text-sm outline-none ring-indigo-500/30 focus:ring-4 dark:border-white/10 dark:bg-black/30"
                 placeholder="Tell me about your project or just say hello!"
                 rows={6}

@@ -22,10 +22,16 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-lightBg text-lightText transition-colors duration-300 dark:bg-darkBg dark:text-darkText">
+      <a
+        href="#main-content"
+        className="fixed left-[-10000px] top-4 z-[100] rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-lg focus:left-4 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:focus:ring-indigo-500/50"
+      >
+        Skip to main content
+      </a>
       <ParticleNetwork isDark={theme === 'dark'} />
       <div className="relative z-10">
         <Navbar theme={theme} setTheme={setTheme} />
-        <main className="mx-auto max-w-6xl px-4 pt-12 sm:px-6">
+        <main id="main-content" className="mx-auto max-w-6xl px-4 pt-12 sm:px-6">
           <Hero />
           <About />
           <Skills />
