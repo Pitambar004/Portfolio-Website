@@ -2,9 +2,23 @@ import { motion } from 'framer-motion'
 
 const uwgbWork = [
   {
+    company: 'University of Wisconsin-Green Bay (UWGB)',
+    role: 'Research Assistant',
+    location: 'Green Bay, WI',
+    date: 'Present',
+    bullets: [
+      'Conduct research on HVAC/AHU air filter degradation for the Brown County STEM Innovation Center.',
+      'Assist in collecting and analyzing internal and external environmental data affecting air filter performance.',
+      'Identify parameters such as temperature, humidity, airflow, and pressure for degradation analysis.',
+      'Collaborate with faculty supervisors and team members to develop data-driven models for filter condition monitoring.',
+      'Contribute to improving building maintenance efficiency through engineering research and sensor-based analysis.',
+      'Skills: Research & Data Analysis, HVAC Systems Knowledge, Environmental Monitoring, Sensor Data Collection, Technical Documentation, Problem Solving, Team Collaboration.',
+    ],
+  },
+  {
     company: 'University of Wisconsin-Green Bay',
     role: 'Member at Large – Student Union Funding Allocation Committee (SUFAC)',
-    location: 'United States • On-site',
+    location: 'Green Bay, WI',
     date: 'Feb 2026 – Present',
     bullets: [
       'Review and evaluate funding requests from student organizations to support fair and effective allocation of student fees.',
