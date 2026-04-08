@@ -6,6 +6,7 @@ const schooling = [
     program: 'Bachelor of Engineering (Software Engineering) + Bachelors in CS-AI',
     date: '2024 – Present',
     location: 'Green Bay, WI',
+    semester: '3rd Semester',
     highlights: ['4.0 GPA', "Dean's List"],
     bullets: [
       'Software Engineering + CS/AI track with a focus on building practical, production-minded systems.',
@@ -66,6 +67,9 @@ function Schooling() {
 
             <p className="mb-1 font-mono text-xs text-zinc-500">{item.date}</p>
             <p className="mb-3 text-xs text-zinc-500 dark:text-zinc-400">{item.location}</p>
+            {item.semester && (
+              <p className="mb-3 text-xs font-medium text-indigo-700 dark:text-indigo-300">Semester: {item.semester}</p>
+            )}
             {item.highlights && (
               <div className="mb-3 flex flex-wrap gap-2">
                 {item.highlights.map((highlight) => (
