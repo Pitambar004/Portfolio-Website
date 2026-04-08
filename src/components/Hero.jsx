@@ -65,9 +65,9 @@ function Hero() {
             <span className="h-3 w-3 rounded-full bg-green-500" />
           </div>
           <div className="px-4 py-6">
-            <div className="grid gap-5 font-mono text-xs md:text-sm">
+            <div className="grid min-w-0 gap-5 font-mono text-[11px] sm:text-xs md:text-sm">
               {/* Dark editor surface so syntax colors stay readable in light theme */}
-              <div className="rounded-lg border border-zinc-700/90 bg-zinc-900 p-3 text-zinc-100 shadow-inner dark:border-white/10 dark:bg-zinc-950/90">
+              <div className="min-w-0 overflow-hidden rounded-lg border border-zinc-700/90 bg-zinc-900 p-3 text-zinc-100 shadow-inner dark:border-white/10 dark:bg-zinc-950/90">
                 <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-indigo-300">
                   JavaScript
                 </p>
@@ -79,9 +79,9 @@ function Hero() {
                   viewport={{ once: true }}
                   transition={{ duration: 1.6, ease: 'easeInOut' }}
                   style={{ transformOrigin: 'top' }}
-                  className="overflow-hidden will-change-transform"
+                  className="min-w-0 overflow-hidden will-change-transform"
                 >
-                  <pre className="overflow-x-auto whitespace-pre text-zinc-100">
+                  <pre className="w-full max-w-full overflow-x-auto whitespace-pre text-zinc-100">
                     <code>
                       {jsLines.map((line, idx) => (
                         <span key={idx}>
