@@ -2,6 +2,20 @@ import { motion } from 'framer-motion'
 
 const uwgbWork = [
   {
+    company: 'University of Wisconsin-Green Bay',
+    role: 'Member at Large – Student Union Funding Allocation Committee (SUFAC)',
+    location: 'United States • On-site',
+    date: 'Feb 2026 – Present',
+    bullets: [
+      'Review and evaluate funding requests from student organizations to support fair and effective allocation of student fees.',
+      'Participate in committee discussions and decisions on budget approvals and financial planning.',
+      'Represent broader student interests by promoting transparency, accountability, and equity in funding decisions.',
+      'Collaborate with committee members and university staff to assess event proposals, budgets, and organizational needs.',
+      'Monitor funded activities for policy compliance and proper use of allocated funds.',
+      'Contribute to improving funding policies and processes that support student engagement and campus initiatives.',
+    ],
+  },
+  {
     company: 'Google Developer Group on Campus – UWGB',
     role: 'Vice President',
     location: 'Green Bay, WI',
