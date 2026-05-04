@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
-import { writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 /** Writes robots.txt + sitemap.xml into dist using VITE_SITE_URL (production domain). */
@@ -24,6 +24,13 @@ function seoFilesPlugin(mode, root) {
 `
       writeFileSync(resolve(outDir, 'robots.txt'), robots)
       writeFileSync(resolve(outDir, 'sitemap.xml'), sitemap)
+      // GitHub Pages: unknown paths (e.g. /admin) serve 404.html — must be the SPA entry so React Router runs.
+      const indexPath = resolve(outDir, 'index.html')
+      try {
+        writeFileSync(resolve(outDir, '404.html'), readFileSync(indexPath, 'utf8'))
+      } catch {
+        /* dist may be missing in edge cases */
+      }
     },
   }
 }
