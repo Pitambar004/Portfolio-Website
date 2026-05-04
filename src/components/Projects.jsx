@@ -1,43 +1,12 @@
 import { motion } from 'framer-motion'
 import { FaFolder, FaGithub } from 'react-icons/fa'
-
-const projects = [
-  {
-    name: 'LedgerSync',
-    description:
-      'Java app that reads account + transaction JSON, matches records, updates balances, and outputs a new JSON snapshot (CS 330 assignment).',
-    stack: 'Java · Jackson · JSON · OOP',
-    languageColor: 'bg-red-500',
-    github: '#',
-    live: '#',
-  },
-  {
-    name: 'Bill Splitter App',
-    description: 'GUI app that splits bills with tax logic and validation for cleaner shared expense tracking.',
-    stack: 'Python · Tkinter · OOP',
-    languageColor: 'bg-blue-500',
-    github: '#',
-    live: '#',
-  },
-  {
-    name: 'Task Manager CLI',
-    description: 'Command-line task manager with Gson persistence, UUID tasks, and scalable object-oriented design.',
-    stack: 'Java · Maven · Gson',
-    languageColor: 'bg-orange-500',
-    github: '#',
-    live: '#',
-  },
-  {
-    name: 'Lost & Found System',
-    description: 'Desktop JavaFX app backed by MySQL for reporting, managing, and verifying lost/found items.',
-    stack: 'Java 17 · JavaFX · MySQL',
-    languageColor: 'bg-indigo-500',
-    github: '#',
-    live: '#',
-  },
-]
+import { useSiteContent } from '../context/SiteContentContext'
 
 function Projects() {
+  const { data } = useSiteContent()
+  const projects = data.projects || []
+  const showMoreComing = data.projectsShowMoreComing !== false
+
   return (
     <motion.section
       id="projects"
@@ -65,7 +34,7 @@ function Projects() {
             <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-300">{project.description}</p>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs">
-                <span className={`h-2.5 w-2.5 rounded-full ${project.languageColor}`} />
+                <span className={`h-2.5 w-2.5 rounded-full ${project.languageColor || 'bg-zinc-500'}`} />
                 <span>{project.stack}</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
@@ -90,9 +59,11 @@ function Projects() {
             </div>
           </motion.article>
         ))}
-        <div className="grid place-items-center rounded-xl border-2 border-dashed border-zinc-300 p-5 font-mono text-sm text-zinc-500 dark:border-zinc-700">
-          + More Coming Soon
-        </div>
+        {showMoreComing && (
+          <div className="grid place-items-center rounded-xl border-2 border-dashed border-zinc-300 p-5 font-mono text-sm text-zinc-500 dark:border-zinc-700">
+            + More Coming Soon
+          </div>
+        )}
       </div>
     </motion.section>
   )

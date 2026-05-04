@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "about": {
+    "heading": "Built by an Engineer, Driven by Impact.",
+    "paragraphs": [
+      "I'm Pitambar Pandey, a Software Engineering student at the University of Wisconsin–Green Bay (UWGB). I build full-stack and academic software with a focus on clean design, solid fundamentals, and shipping projects end to end.",
+      "My toolkit spans Java, Python, JavaScript, HTML, CSS, C, Git, and databases — from React and Node-style web work to Java and Python apps. I've shipped personal and school projects (including a responsive site for my high school) and I'm looking for internships where I can grow as a Java, Python, or full-stack developer."
+    ],
+    "tagline": "🚀 Always learning. Always building.",
+    "imageSrc": "/profile.jpg",
+    "imageAlt": "Pitambar Pandey, Software Engineering student at UW–Green Bay, portrait photo",
+    "imageCaption": "profile.jpg"
+  },
+  "skills": {
+    "intro": "Core skills for building software as a UWGB student developer — Java, Python, JavaScript, React, and full-stack delivery.",
+    "categories": {
+      "languages": ["Java", "Python", "JavaScript", "C", "SQL", "HTML", "CSS"],
+      "frameworks": ["React.js", "Node.js", "JavaFX", "Tkinter", "Azure OpenAI"],
+      "devTools": ["Git", "GitHub", "Maven", "MySQL", "REST APIs"],
+      "concepts": ["OOP", "Database Design", "Agile", "OS", "Compilers"]
+    },
+    "icons": [
+      { "id": "java", "name": "Java" },
+      { "id": "python", "name": "Python" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "c", "name": "C" },
+      { "id": "sql", "name": "SQL" },
+      { "id": "html", "name": "HTML" },
+      { "id": "css", "name": "CSS" },
+      { "id": "react", "name": "React.js" },
+      { "id": "nodejs", "name": "Node.js" },
+      { "id": "git", "name": "Git" },
+      { "id": "github", "name": "GitHub" },
+      { "id": "mysql", "name": "MySQL" },
+      { "id": "azure-openai", "name": "Azure OpenAI" }
+    ]
+  },
+  "projects": [
+    {
+      "name": "LedgerSync",
+      "description": "Java app that reads account + transaction JSON, matches records, updates balances, and outputs a new JSON snapshot (CS 330 assignment).",
+      "stack": "Java · Jackson · JSON · OOP",
+      "languageColor": "bg-red-500",
+      "github": "#",
+      "live": "#"
+    },
+    {
+      "name": "Bill Splitter App",
+      "description": "GUI app that splits bills with tax logic and validation for cleaner shared expense tracking.",
+      "stack": "Python · Tkinter · OOP",
+      "languageColor": "bg-blue-500",
+      "github": "#",
+      "live": "#"
+    },
+    {
+      "name": "Task Manager CLI",
+      "description": "Command-line task manager with Gson persistence, UUID tasks, and scalable object-oriented design.",
+      "stack": "Java · Maven · Gson",
+      "languageColor": "bg-orange-500",
+      "github": "#",
+      "live": "#"
+    },
+    {
+      "name": "Lost & Found System",
+      "description": "Desktop JavaFX app backed by MySQL for reporting, managing, and verifying lost/found items.",
+      "stack": "Java 17 · JavaFX · MySQL",
+      "languageColor": "bg-indigo-500",
+      "github": "#",
+      "live": "#"
+    }
+  ],
+  "projectsShowMoreComing": true,
+  "experience": {
+    "uwgbWork": [
+      {
+        "company": "University of Wisconsin-Green Bay (UWGB)",
+        "role": "Research Assistant",
+        "location": "Green Bay, WI",
+        "date": "Present",
+        "bullets": [
+          "Conduct research on HVAC/AHU air filter degradation for the Brown County STEM Innovation Center.",
+          "Assist in collecting and analyzing internal and external environmental data affecting air filter performance.",
+          "Identify parameters such as temperature, humidity, airflow, and pressure for degradation analysis.",
+          "Collaborate with faculty supervisors and team members to develop data-driven models for filter condition monitoring.",
+          "Contribute to improving building maintenance efficiency through engineering research and sensor-based analysis.",
+          "Skills: Research & Data Analysis, HVAC Systems Knowledge, Environmental Monitoring, Sensor Data Collection, Technical Documentation, Problem Solving, Team Collaboration."
+        ]
+      },
+      {
+        "company": "University of Wisconsin-Green Bay",
+        "role": "Member at Large – Student Union Funding Allocation Committee (SUFAC)",
+        "location": "Green Bay, WI",
+        "date": "Feb 2026 – Present",
+        "bullets": [
+          "Review and evaluate funding requests from student organizations to support fair and effective allocation of student fees.",
+          "Participate in committee discussions and decisions on budget approvals and financial planning.",
+          "Represent broader student interests by promoting transparency, accountability, and equity in funding decisions.",
+          "Collaborate with committee members and university staff to assess event proposals, budgets, and organizational needs.",
+          "Monitor funded activities for policy compliance and proper use of allocated funds.",
+          "Contribute to improving funding policies and processes that support student engagement and campus initiatives."
+        ]
+      },
+      {
+        "company": "Google Developer Group on Campus – UWGB",
+        "role": "Vice President",
+        "location": "Green Bay, WI",
+        "date": "Nov 2025 – Present",
+        "bullets": [
+          "Helped establish the official GDG chapter at UW–Green Bay as a space for students to explore modern tech.",
+          "Designed the chapter framework and defined leadership roles for sustainable growth.",
+          "Led outreach to grow membership and visibility on campus.",
+          "Planned workshops and study jams on Android, Firebase, web, AI/ML, and Google Cloud.",
+          "Connected with nearby GDG communities and campus orgs; laid groundwork for hackathons and mentorship."
+        ]
+      },
+      {
+        "company": "Chartwells Higher Education Dining Services",
+        "role": "Supervisor – Einstein Bros. Bagels",
+        "location": "Green Bay, WI",
+        "date": "Sep 2024 – Present",
+        "bullets": [
+          "Supervise daily operations and customer service during peak hours.",
+          "Manage staff schedules, inventory, and product quality for beverages and food.",
+          "Train new hires, coordinate daily tasks, and keep workflows efficient to company standards."
+        ]
+      }
+    ],
+    "entries": [
+      {
+        "company": "Media and IT Hub Pvt. Ltd.",
+        "role": "CEO / Event Coordinator",
+        "location": "Kathmandu, Nepal",
+        "date": "Aug 2023 – Jul 2024",
+        "bullets": [
+          "Led the company as CEO, driving strategy, growth, and innovation across media and IT services.",
+          "Coordinated bridge courses blending media and IT education for students.",
+          "Taught Math, Physics, and Chemistry with a focus on foundational skills.",
+          "Oversaw program development and execution to deliver strong educational outcomes."
+        ]
+      },
+      {
+        "company": "Sauryakunj Academy",
+        "role": "Secondary Science & Computer Teacher",
+        "location": "Nepal",
+        "date": "Sep 2023 – Apr 2024",
+        "bullets": [
+          "Designed hands-on science experiments to deepen student understanding.",
+          "Adapted instruction for diverse learning styles; used simulations and educational apps.",
+          "Promoted inquiry-based learning and organized science fairs and field trips."
+        ]
+      },
+      {
+        "company": "Orient College",
+        "role": "IT Head",
+        "location": "Basundhara, Kathmandu",
+        "date": "Jul 2021 – Aug 2023",
+        "bullets": [
+          "Set up computers, projectors, and network gear for college events.",
+          "Supported students and faculty with technical issues during programs.",
+          "Ran sessions on using technology for real-world problem solving.",
+          "Managed tech and registration for gaming events; collaborated with student clubs."
+        ]
+      }
+    ]
+  },
+  "coursework": {
+    "pageHeading": "Major Coursework",
+    "engineeringSupporting": {
+      "title": "Software engineering supporting courses",
+      "courses": [
+        { "id": "eng-0", "name": "SE 310 - SE Fundamentals", "status": "progress" },
+        { "id": "eng-1", "name": "ENGR 236 - Technical Writing", "status": "progress" },
+        { "id": "eng-2", "name": "COMP SCI 256 - Intro to Software Design", "status": "taken" }
+      ]
+    },
+    "otherCourses": {
+      "title": "Other courses",
+      "courses": [
+        { "id": "other-0", "name": "COMP SCI 140 - Programming Problem Solving", "status": "progress" },
+        { "id": "other-1", "name": "COMP SCI 181 - Human-Centered Design", "status": "progress" },
+        { "id": "other-2", "name": "COMP SCI 240 - Discrete Mathematics", "status": "taken" },
+        { "id": "other-3", "name": "COMP SCI 231 - Introduction to Operations", "status": "taken" },
+        { "id": "other-4", "name": "COMP SCI 256 - Intro to Software Design", "status": "taken" },
+        { "id": "other-5", "name": "COMP SCI 330 - Computer Programming II", "status": "taken" },
+        { "id": "other-6", "name": "COMP SCI 207 - Programming in C", "status": "taken" },
+        { "id": "other-7", "name": "MATH 203 - Calculus-Analyt Geom I", "status": "taken" },
+        { "id": "other-8", "name": "MATH 260 - Introductory Statistics", "status": "taken" },
+        { "id": "other-9", "name": "MATH 202 - Calculus-Analyt Geom E", "status": "taken" },
+        { "id": "other-10", "name": "MATH 320 - Linear Algebra and Matrix Theory", "status": "progress" }
+      ]
+    }
+  }
+}
