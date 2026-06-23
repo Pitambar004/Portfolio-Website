@@ -1,6 +1,5 @@
 import { defineConfig, loadEnv } from 'vite'
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import babel from '@rolldown/plugin-babel'
+import react from '@vitejs/plugin-react'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
@@ -43,7 +42,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
-      babel({ presets: [reactCompilerPreset()] }),
       {
         name: 'html-transform-seo',
         transformIndexHtml(html) {
