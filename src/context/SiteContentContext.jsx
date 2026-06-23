@@ -6,18 +6,23 @@ import { SITE_DATA_STORAGE_KEY, isValidSiteData, sanitizeSiteData } from '../lib
 const SiteContentContext = createContext(null)
 
 function loadInitialData() {
+  const bundled = sanitizeSiteData(siteData)
+  const bundledVersion = bundled.version ?? 1
+
   try {
     const raw = localStorage.getItem(SITE_DATA_STORAGE_KEY)
     if (raw) {
       const parsed = JSON.parse(raw)
-      if (isValidSiteData(parsed)) {
+      const storedVersion = parsed?.version ?? 1
+      if (storedVersion >= bundledVersion && isValidSiteData(parsed)) {
         return sanitizeSiteData(parsed)
       }
+      localStorage.removeItem(SITE_DATA_STORAGE_KEY)
     }
   } catch {
     /* ignore */
   }
-  return sanitizeSiteData(siteData)
+  return bundled
 }
 
 export function SiteContentProvider({ children }) {
