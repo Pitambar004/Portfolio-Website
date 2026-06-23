@@ -571,9 +571,11 @@ function Admin({ theme, setTheme }) {
           </p>
           {!passwordConfigured && (
             <div className="mb-4 rounded-lg border border-amber-300/80 bg-amber-50 p-3 text-sm text-amber-950 dark:border-amber-500/40 dark:bg-amber-950/30 dark:text-amber-100">
-              Set <span className="font-mono">VITE_ADMIN_PASSWORD</span> in a{' '}
-              <span className="font-mono">.env</span> file locally and in your hosting provider&apos;s environment
-              variables for production. Never commit real passwords to Git.
+              Set <span className="font-mono">VITE_ADMIN_PASSWORD</span> in a local{' '}
+              <span className="font-mono">.env</span> (see <span className="font-mono">.env.example</span>). On{' '}
+              <strong className="font-medium">Vercel</strong>: Project → Settings → Environment Variables → add{' '}
+              <span className="font-mono">VITE_ADMIN_PASSWORD</span> for <strong className="font-medium">Production</strong>, then{' '}
+              <strong className="font-medium">Redeploy</strong> so the build embeds it. Never commit real passwords to Git.
             </div>
           )}
           <form onSubmit={handleLogin} className="space-y-3">

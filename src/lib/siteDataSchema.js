@@ -11,16 +11,17 @@ export const COURSEWORK_STATUS = {
 
 function defaultEngineeringSupportingCourses() {
   return [
-    { name: 'SE 310 - SE Fundamentals', status: COURSEWORK_STATUS.progress },
-    { name: 'ENGR 236 - Technical Writing', status: COURSEWORK_STATUS.progress },
+    { name: 'SE 310 - SE Fundamentals', status: COURSEWORK_STATUS.taken },
+    { name: 'ENGR 236 - Technical Writing', status: COURSEWORK_STATUS.taken },
     { name: 'COMP SCI 256 - Intro to Software Design', status: COURSEWORK_STATUS.taken },
+    { name: 'SE 320 - Software Tools & Process', status: COURSEWORK_STATUS.progress },
   ]
 }
 
 function defaultOtherCourses() {
   return [
-    { name: 'COMP SCI 140 - Programming Problem Solving', status: COURSEWORK_STATUS.progress },
-    { name: 'COMP SCI 181 - Human-Centered Design', status: COURSEWORK_STATUS.progress },
+    { name: 'COMP SCI 140 - Programming Problem Solving', status: COURSEWORK_STATUS.taken },
+    { name: 'COMP SCI 181 - Human-Centered Design', status: COURSEWORK_STATUS.taken },
     { name: 'COMP SCI 240 - Discrete Mathematics', status: COURSEWORK_STATUS.taken },
     { name: 'COMP SCI 231 - Introduction to Operations', status: COURSEWORK_STATUS.taken },
     { name: 'COMP SCI 256 - Intro to Software Design', status: COURSEWORK_STATUS.taken },
@@ -29,7 +30,11 @@ function defaultOtherCourses() {
     { name: 'MATH 203 - Calculus-Analyt Geom I', status: COURSEWORK_STATUS.taken },
     { name: 'MATH 260 - Introductory Statistics', status: COURSEWORK_STATUS.taken },
     { name: 'MATH 202 - Calculus-Analyt Geom E', status: COURSEWORK_STATUS.taken },
-    { name: 'MATH 320 - Linear Algebra and Matrix Theory', status: COURSEWORK_STATUS.progress },
+    { name: 'MATH 320 - Linear Algebra and Matrix Theory', status: COURSEWORK_STATUS.taken },
+    { name: 'COMP SCI 221 - Database Design & Management', status: COURSEWORK_STATUS.progress },
+    { name: 'COMP SCI 351 - Data Structures', status: COURSEWORK_STATUS.progress },
+    { name: 'COMP SCI 348 - Computer Networks', status: COURSEWORK_STATUS.progress },
+    { name: 'COMP SCI 251 - Computer Systems Fundamentals', status: COURSEWORK_STATUS.progress },
   ]
 }
 

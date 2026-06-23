@@ -88,7 +88,7 @@
       },
       {
         "company": "University of Wisconsin-Green Bay",
-        "role": "Member at Large – Student Union Funding Allocation Committee (SUFAC)",
+        "role": "Member at Large – Segregated University Fee Allocation Committee (SUFAC)",
         "location": "Green Bay, WI",
         "date": "Feb 2026 – Present",
         "bullets": [
@@ -168,16 +168,17 @@
     "engineeringSupporting": {
       "title": "Software engineering supporting courses",
       "courses": [
-        { "id": "eng-0", "name": "SE 310 - SE Fundamentals", "status": "progress" },
-        { "id": "eng-1", "name": "ENGR 236 - Technical Writing", "status": "progress" },
-        { "id": "eng-2", "name": "COMP SCI 256 - Intro to Software Design", "status": "taken" }
+        { "id": "eng-0", "name": "SE 310 - SE Fundamentals", "status": "taken" },
+        { "id": "eng-1", "name": "ENGR 236 - Technical Writing", "status": "taken" },
+        { "id": "eng-2", "name": "COMP SCI 256 - Intro to Software Design", "status": "taken" },
+        { "id": "eng-3", "name": "SE 320 - Software Tools & Process", "status": "progress" }
       ]
     },
     "otherCourses": {
       "title": "Other courses",
       "courses": [
-        { "id": "other-0", "name": "COMP SCI 140 - Programming Problem Solving", "status": "progress" },
-        { "id": "other-1", "name": "COMP SCI 181 - Human-Centered Design", "status": "progress" },
+        { "id": "other-0", "name": "COMP SCI 140 - Programming Problem Solving", "status": "taken" },
+        { "id": "other-1", "name": "COMP SCI 181 - Human-Centered Design", "status": "taken" },
         { "id": "other-2", "name": "COMP SCI 240 - Discrete Mathematics", "status": "taken" },
         { "id": "other-3", "name": "COMP SCI 231 - Introduction to Operations", "status": "taken" },
         { "id": "other-4", "name": "COMP SCI 256 - Intro to Software Design", "status": "taken" },
@@ -186,7 +187,11 @@
         { "id": "other-7", "name": "MATH 203 - Calculus-Analyt Geom I", "status": "taken" },
         { "id": "other-8", "name": "MATH 260 - Introductory Statistics", "status": "taken" },
         { "id": "other-9", "name": "MATH 202 - Calculus-Analyt Geom E", "status": "taken" },
-        { "id": "other-10", "name": "MATH 320 - Linear Algebra and Matrix Theory", "status": "progress" }
+        { "id": "other-10", "name": "MATH 320 - Linear Algebra and Matrix Theory", "status": "taken" },
+        { "id": "other-11", "name": "COMP SCI 221 - Database Design & Management", "status": "progress" },
+        { "id": "other-12", "name": "COMP SCI 351 - Data Structures", "status": "progress" },
+        { "id": "other-13", "name": "COMP SCI 348 - Computer Networks", "status": "progress" },
+        { "id": "other-14", "name": "COMP SCI 251 - Computer Systems Fundamentals", "status": "progress" }
       ]
     }
   }

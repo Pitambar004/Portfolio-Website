@@ -3,15 +3,15 @@ import { motion } from 'framer-motion'
 const schooling = [
   {
     school: 'University of Wisconsin–Green Bay',
-    program: 'Bachelor of Engineering (Software Engineering) + Bachelors in CS-AI',
+    program: 'Bachelor of Engineering (Software Engineering)',
     date: '2024 – Present',
     location: 'Green Bay, WI',
-    semester: '3rd Semester',
-    highlights: ['4.0 GPA', "Dean's List"],
+    semester: 'Junior Level',
+    highlights: ['3.93 GPA', "Dean's List"],
     bullets: [
-      'Software Engineering + CS/AI track with a focus on building practical, production-minded systems.',
+      'Software Engineering with a focus on building practical, production-minded systems.',
       'Coursework and project work spanning programming, data structures, and software development fundamentals.',
-      'Current academic standing: Sophomore.',
+      'Current academic standing: Junior.',
     ],
   },
   {

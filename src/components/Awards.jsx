@@ -45,7 +45,7 @@ function Awards() {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div className="rounded-xl border border-black/10 bg-lightCard p-6 dark:border-white/10 dark:bg-darkCard">
           <p className="text-4xl font-extrabold text-indigo-600 dark:text-indigo-300">
-            <Counter target={4} suffix=".0" start={isInView} />
+            3.93
           </p>
           <p className="mt-2 text-sm text-zinc-500">GPA</p>
         </div>

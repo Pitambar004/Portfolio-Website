@@ -25,7 +25,7 @@ function Hero() {
     </>,
     <>
       {'  '}
-      <span className="text-emerald-300">"gpa"</span>: <span className="text-orange-300">4.0</span>,
+      <span className="text-emerald-300">"gpa"</span>: <span className="text-orange-300">3.93</span>,
     </>,
     <>
       {'  '}
